@@ -11,13 +11,6 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
 
-    <!--<RuntimeIdentifiers>win-x64;linux-x64;osx-arm64</RuntimeIdentifiers>    
-    <PublishAot>false</PublishAot>
-    <IsAotCompatible>false</IsAotCompatible>
-    <StripSymbols>false</StripSymbols>
-    <PublishTrimmed>false</PublishTrimmed>
-    <VerifyReferenceAotCompatibility>false</VerifyReferenceAotCompatibility>-->
-
     <IsPackable>true</IsPackable>
     <PackAsTool>true</PackAsTool>
     <PackageType>DotnetTool</PackageType>
@@ -40,7 +33,7 @@
     <PackageReadmeFile>./readme.md</PackageReadmeFile>
     <PackageIconUrl>./app.png</PackageIconUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Copyright>Copyright © 2026 Wagner Alves (wagrms@hotmail.com)</Copyright>
+    <Copyright>Copyright © 2026 Wagner Alves</Copyright>
     
     <!-- Figure out a good way to have this outside of csproj -->
     <PackageReleaseNotes>Initial version</PackageReleaseNotes>
@@ -56,7 +49,9 @@
     <None Include="../../readme.md" Pack="true" PackagePath=".">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="../../img/app.png" Pack="true" PackagePath="." />
+    <None Include="../../img/app.png" Pack="true" PackagePath=".">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

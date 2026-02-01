@@ -21,10 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\wng\wng.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Using Include="NUnit.Framework" />
   </ItemGroup>
 
@@ -66,6 +62,10 @@
 
   <ItemGroup>
     <Folder Include="Resources\Npm\vulnerable\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\src\wng\wng.csproj" />
   </ItemGroup>
 
 </Project>
