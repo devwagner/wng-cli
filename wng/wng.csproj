@@ -11,13 +11,19 @@
     <PublishAot>false</PublishAot>
     <IsAotCompatible>false</IsAotCompatible>
     <StripSymbols>false</StripSymbols>
+    <PublishTrimmed>false</PublishTrimmed>
+    <PackageType>DotnetTool</PackageType>
+    <PackageOutputPath>./nupkg</PackageOutputPath>
     <VerifyReferenceAotCompatibility>false</VerifyReferenceAotCompatibility>
 
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>wng</ToolCommandName>
-    <PackageId>WNG Package Management Tool</PackageId>
+    <PackageId>wng</PackageId>
     <Version>1.0.0</Version>
     <Authors>Wagner Alves</Authors>
+    <Product>WNG Package Management Tool</Product>
+    <Title>WNG Package Management Tool</Title>
+    <RepositoryUrl>https://github.com/devwagner/wng-cli</RepositoryUrl>
     <Description>A fast AOT-compiled npm and nuget package management tool</Description>
   </PropertyGroup>
 

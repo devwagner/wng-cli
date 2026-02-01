@@ -5,7 +5,6 @@ using wng.Model;
 using wng.Model.Dotnet;
 using wng.Model.Shared;
 using wng.Providers;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace wng.Commands.Dotnet {
     internal class DotnetCommand : AsyncCommand<DotnetCommand.Settings> {
@@ -17,7 +16,7 @@ namespace wng.Commands.Dotnet {
 
             [CommandArgument(0, "[path]")]
             [Description("(Optional) [Gray]The path to the csproj or the solution folder it resides. If not specified, the current working directory will be used.[/]")]
-            public string Path { get; init; } = string.Empty;
+            public string Path { get; init; } = Directory.GetCurrentDirectory();
 
             [CommandOption("-p|--projects <projects>")]
             [Description("""[Gray]A comma-separated list of names or partial names to filter the projects during analysis. Ex. "project1,project2,project3".[/]""")]
