@@ -2,7 +2,9 @@
   <Folder Name="/Common/">
     <File Path=".editorconfig" />
     <File Path=".gitignore" />
+    <File Path="LICENSE" />
+    <File Path="readme.md" />
   </Folder>
   <Project Path="testing/testing.csproj" />
-  <Project Path="wng/wng.csproj" />
+  <Project Path="src/wng/wng.csproj" />
 </Solution>

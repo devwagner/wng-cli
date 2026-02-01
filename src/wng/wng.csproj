@@ -1,0 +1,62 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>wng</RootNamespace>
+    <AssemblyName>wng</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+
+    <!--<RuntimeIdentifiers>win-x64;linux-x64;osx-arm64</RuntimeIdentifiers>    
+    <PublishAot>false</PublishAot>
+    <IsAotCompatible>false</IsAotCompatible>
+    <StripSymbols>false</StripSymbols>
+    <PublishTrimmed>false</PublishTrimmed>
+    <VerifyReferenceAotCompatibility>false</VerifyReferenceAotCompatibility>-->
+
+    <IsPackable>true</IsPackable>
+    <PackAsTool>true</PackAsTool>
+    <PackageType>DotnetTool</PackageType>
+    <PackageOutputPath>./nupkg</PackageOutputPath>
+    <RollForward>LatestMajor</RollForward>
+
+    <PackageId>wng</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Wagner Alves</Authors>
+
+    <ToolCommandName>wng</ToolCommandName>
+    <Product>WNG Package Management Tool</Product>
+    <Title>WNG Package Management Tool</Title>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/devwagner/wng-cli</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/devwagner/wng-cli</RepositoryUrl>
+    <PackageTags>package;management;nuget;npm;dotnet;cli</PackageTags>
+    <Description>A fast npm and nuget package management tool</Description>
+
+    <PackageReadmeFile>./readme.md</PackageReadmeFile>
+    <PackageIconUrl>./app.png</PackageIconUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Copyright>Copyright © 2026 Wagner Alves (wagrms@hotmail.com)</Copyright>
+    
+    <!-- Figure out a good way to have this outside of csproj -->
+    <PackageReleaseNotes>Initial version</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NuGet.Protocol" Version="7.0.1" />
+    <PackageReference Include="Spectre.Console" Version="0.54.0" />
+    <PackageReference Include="Spectre.Console.Cli" Version="0.53.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="../../readme.md" Pack="true" PackagePath=".">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../img/app.png" Pack="true" PackagePath="." />
+  </ItemGroup>
+
+</Project>
