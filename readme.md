@@ -14,7 +14,7 @@
 ## Installation
 
 ```bash
-dotnet tool install -g wng.cli
+dotnet tool install -g wng
 ```
 
 ## Commands
