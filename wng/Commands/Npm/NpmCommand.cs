@@ -15,7 +15,7 @@ namespace wng.Commands.Npm {
 
             [CommandArgument(0, "[path]")]
             [Description("(Optional) [Gray]The path to the package.json file or the folder it resides. If not specified, the current working directory will be used.[/]")]
-            public string Path { get; init; } = string.Empty;
+            public string Path { get; init; } = Directory.GetCurrentDirectory();
 
             [CommandOption("-p|--packages <packages>")]
             [Description("""[Gray]A comma-separated list of names or partial names to filter the packages during analysis. Ex. "package1,package2,package3".[/]""")]

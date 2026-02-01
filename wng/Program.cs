@@ -40,6 +40,12 @@ namespace wng {
             var app = new CommandApp();
             app.Configure(config => {
 
+                config.Settings.PropagateExceptions = true;
+                config.Settings.StrictParsing = true;
+                config.Settings.MaximumIndirectExamples = 10;
+                config.Settings.ShowOptionDefaultValues = true;
+                config.Settings.CaseSensitivity = CaseSensitivity.None;
+
 #if DEBUG
                 config.ValidateExamples();
                 config.PropagateExceptions();
@@ -47,11 +53,6 @@ namespace wng {
                 config.SetApplicationName("wng");
                 config.SetApplicationVersion(Version);
                 config.SetDefaultStyles();
-
-                config.Settings.StrictParsing = true;
-                config.Settings.MaximumIndirectExamples = 10;
-                config.Settings.ShowOptionDefaultValues = true;
-                config.Settings.CaseSensitivity = CaseSensitivity.None;
 
                 NpmCommand.Register(config);
                 NuGetCommand.Register(config);
