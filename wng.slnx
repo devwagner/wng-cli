@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/Common/">
+    <File Path=".editorconfig" />
+    <File Path=".gitignore" />
+  </Folder>
+  <Project Path="testing/testing.csproj" />
+  <Project Path="wng/wng.csproj" />
+</Solution>

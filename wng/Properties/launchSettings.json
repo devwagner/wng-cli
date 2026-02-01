@@ -1,0 +1,37 @@
+{
+  "profiles": {
+    "wng": {
+      "commandName": "Project",
+      "commandLineArgs": "--help"
+    },
+    "npm-single": {
+      "commandName": "Project",
+      "commandLineArgs": "npm \"C:\\Temp\\wng-cli\\single\"",
+      "workingDirectory": "C:\\Temp\\wng-cli\\single",
+      "hotReloadEnabled": false
+    },
+    "npm-normal": {
+      "commandName": "Project",
+      "commandLineArgs": "npm \"C:\\Temp\\wng-cli\\normal\"",
+      "workingDirectory": "C:\\Temp\\wng-cli\\normal",
+      "hotReloadEnabled": false
+    },
+    "nuget-xphub": {
+      "commandName": "Project",
+      "commandLineArgs": "nuget \"C:\\Projects\\Brainworks\\XPHuddle\\source\\XPHub.Service\" --debug",
+      "workingDirectory": "C:\\Projects\\Brainworks\\XPHuddle\\source\\XPHub.Service",
+      "hotReloadEnabled": false
+    },
+    "nuget-westeros": {
+      "commandName": "Project",
+      "commandLineArgs": "nuget \"C:\\Projects\\Brainworks\\Westeros\" --minor --restore",
+      "workingDirectory": "C:\\Projects\\Brainworks\\XPHuddle\\source\\XPHub.Service",
+      "hotReloadEnabled": false
+    },
+    "dotnet-sdk": {
+      "commandName": "Project",
+      "commandLineArgs": "dotnet --sdk --install 8",
+      "hotReloadEnabled": false
+    }
+  }
+}
